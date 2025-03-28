@@ -45,5 +45,5 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
         with:
-          branch: main
-          folder: docs/.vuepress/dist
+          target-branch: main
+          build_dir: docs/.vuepress/dist
