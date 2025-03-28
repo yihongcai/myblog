@@ -41,15 +41,6 @@ jobs:
           # Upload entire repository
           path: '.'
 
-      - name: 设置 Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: pnpm
-
-      - name: Build VuePress Project
-        run: pnpm run docs:build
-
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
