@@ -1,9 +1,10 @@
-import { blogPlugin } from '@vuepress/plugin-blog'
-import { defaultTheme } from '@vuepress/theme-default'
-import { defineUserConfig } from 'vuepress'
-import { webpackBundler } from '@vuepress/bundler-webpack'
+import { blogPlugin } from '@vuepress/plugin-blog';
+import { defaultTheme } from '@vuepress/theme-default';
+import { defineUserConfig } from 'vuepress';
+import { webpackBundler } from '@vuepress/bundler-webpack';
 
 export default defineUserConfig({
+  base: './',
   lang: 'en-US',
 
   title: 'VuePress',
@@ -103,19 +104,20 @@ export default defineUserConfig({
           // Sort pages with time and sticky
           sorter: (pageA, pageB) => {
             if (pageA.frontmatter.sticky && pageB.frontmatter.sticky)
-              return pageB.frontmatter.sticky - pageA.frontmatter.sticky
+              return pageB.frontmatter.sticky - pageA.frontmatter.sticky;
 
-            if (pageA.frontmatter.sticky && !pageB.frontmatter.sticky) return -1
+            if (pageA.frontmatter.sticky && !pageB.frontmatter.sticky)
+              return -1;
 
-            if (!pageA.frontmatter.sticky && pageB.frontmatter.sticky) return 1
+            if (!pageA.frontmatter.sticky && pageB.frontmatter.sticky) return 1;
 
-            if (!pageB.frontmatter.date) return 1
-            if (!pageA.frontmatter.date) return -1
+            if (!pageB.frontmatter.date) return 1;
+            if (!pageA.frontmatter.date) return -1;
 
             return (
               new Date(pageB.frontmatter.date).getTime() -
               new Date(pageA.frontmatter.date).getTime()
-            )
+            );
           },
         },
         {
@@ -138,4 +140,4 @@ export default defineUserConfig({
   ],
 
   bundler: webpackBundler(),
-})
+});
