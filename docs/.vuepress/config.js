@@ -4,7 +4,7 @@ import { defineUserConfig } from 'vuepress';
 import { webpackBundler } from '@vuepress/bundler-webpack';
 
 export default defineUserConfig({
-  base: './',
+  base: '/myblog/',
   lang: 'en-US',
 
   title: 'VuePress',
