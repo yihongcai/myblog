@@ -23,7 +23,7 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
-          version: 10.17.0 # 指定 pnpm 版本
+          version: 10.7.0 # 指定 pnpm 版本
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -45,5 +45,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           # This is the branch where the docs are deployed to
-          branch: main
-          folder: docs/.vuepress/dist
+          target-branch: gh-pages
+          build_dir: docs/.vuepress/dist
