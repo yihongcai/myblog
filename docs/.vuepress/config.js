@@ -16,8 +16,20 @@ export default defineUserConfig({
     navbar: [
       '/',
       {
-        text: '算法 & 编程',
+        text: '前端基础',
+        link: '/base/',
+      },
+      {
+        text: '前端框架',
+        link: '/framework/',
+      },
+      {
+        text: '算法编程',
         link: '/code/',
+      },
+      {
+        text: '前端最新资讯',
+        link: '/news/',
       },
       {
         text: 'Github',
@@ -28,6 +40,35 @@ export default defineUserConfig({
     sidebarDepth: 2,
 
     sidebar: {
+      '/base/': [
+        {
+          text: 'JavaScript基础',
+          link: '/base/javascript/',
+          sidebarDepth: 1,
+          collapsible: false,
+          children: [],
+        },
+        {
+          text: '浏览器和网络',
+          link: '/base/browserAndNetwork/',
+          sidebarDepth: 1,
+          collapsible: false,
+        },
+      ],
+      '/framework/': [
+        {
+          text: 'Vue篇',
+          link: '/framework/vue/',
+          sidebarDepth: 1,
+          collapsible: false,
+        },
+        {
+          text: 'React篇',
+          link: '/framework/react/',
+          sidebarDepth: 1,
+          collapsible: false,
+        },
+      ],
       '/code/': [
         {
           text: 'Leetcode',
@@ -42,6 +83,12 @@ export default defineUserConfig({
           sidebarDepth: 1,
           collapsible: false,
           children: [],
+        },
+      ],
+      '/news/': [
+        {
+          text: '2025年3月',
+          link: '/news/202503/',
         },
       ],
     },
