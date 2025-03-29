@@ -46,16 +46,33 @@ export default defineUserConfig({
           link: '/base/javascript/',
           sidebarDepth: 1,
           collapsible: false,
-          children: [],
+          children: [
+            '',
+            'javascript/this指向',
+            'javascript/作用域链',
+            'javascript/原型和原型链',
+            'javascript/继承',
+            'javascript/箭头函数',
+            'javascript/异步编程',
+          ],
         },
         {
           text: '浏览器和网络',
           link: '/base/browserAndNetwork/',
           sidebarDepth: 1,
           collapsible: false,
+          children: [
+            'browserAndNetwork/',
+            'browserAndNetwork/跨标签页通信',
+            'browserAndNetwork/浏览器缓存机制',
+          ],
         },
       ],
       '/framework/': [
+        {
+          text: '前端框架',
+          link: '/framework/',
+        },
         {
           text: 'Vue篇',
           link: '/framework/vue/',
@@ -88,7 +105,11 @@ export default defineUserConfig({
       '/news/': [
         {
           text: '2025年3月',
-          link: '/news/202503/',
+          link: '/news/',
+        },
+        {
+          text: '2025年4月',
+          link: '/news/202504',
         },
       ],
     },
