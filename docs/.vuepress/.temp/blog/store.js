@@ -1,1 +1,0 @@
-export const store = JSON.parse("[\"/get-started.html\",\"/code/\",\"/code/leetcode/\",\"/code/leetcode/%E6%95%B0%E7%BB%84%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2.html\",\"/code/leetcode/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3.html\",\"/code/programme/\"]");
