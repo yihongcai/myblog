@@ -16,29 +16,42 @@ export default defineUserConfig({
     navbar: [
       '/',
       {
-        text: 'Article',
-        link: '/article/',
+        text: '算法 & 编程',
+        link: '/code/',
       },
       {
-        text: 'Category',
-        link: '/category/',
-      },
-      {
-        text: 'Tag',
-        link: '/tag/',
-      },
-      {
-        text: 'Timeline',
-        link: '/timeline/',
+        text: 'Github',
+        link: 'https://github.com/yihongcai/myblog',
       },
     ],
+
+    sidebarDepth: 2,
+
+    sidebar: {
+      '/code/': [
+        {
+          text: 'Leetcode',
+          link: '/code/leetcode/',
+          sidebarDepth: 1,
+          collapsible: false,
+          children: ['/code/leetcode/数组和字符串', '/code/leetcode/滑动窗口'],
+        },
+        {
+          text: '算法编程',
+          link: '/code/programme/',
+          sidebarDepth: 1,
+          collapsible: false,
+          children: [],
+        },
+      ],
+    },
   }),
 
   plugins: [
     blogPlugin({
       // Only files under posts are articles
-      filter: ({ filePathRelative }) =>
-        filePathRelative ? filePathRelative.startsWith('posts/') : false,
+      // filter: ({ filePathRelative }) =>
+      //   filePathRelative ? filePathRelative.startsWith('posts/') : false,
 
       // Getting article info
       getInfo: ({ frontmatter, title, data }) => ({
