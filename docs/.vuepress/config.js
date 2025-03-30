@@ -48,6 +48,7 @@ export default defineUserConfig({
           collapsible: false,
           children: [
             '',
+            'javascript/函数柯里化',
             'javascript/this指向',
             'javascript/作用域链',
             'javascript/原型和原型链',
@@ -102,16 +103,7 @@ export default defineUserConfig({
           children: [],
         },
       ],
-      '/news/': [
-        {
-          text: '2025年3月',
-          link: '/news/',
-        },
-        {
-          text: '2025年4月',
-          link: '/news/202504',
-        },
-      ],
+      '/news/': [''],
     },
   }),
 
