@@ -67,6 +67,7 @@ export default defineUserConfig({
             'browserAndNetwork/跨标签页通信',
             'browserAndNetwork/浏览器缓存机制',
             'browserAndNetwork/V8的垃圾回收机制',
+            'browserAndNetwork/同源策略和跨域',
           ],
         },
       ],
