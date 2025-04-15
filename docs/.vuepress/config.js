@@ -24,12 +24,16 @@ export default defineUserConfig({
         link: '/framework/',
       },
       {
+        text: '前端工程化',
+        link: '/devops/',
+      },
+      {
         text: '算法编程',
         link: '/code/',
       },
       {
-        text: '前端最新资讯',
-        link: '/news/',
+        text: 'AI',
+        link: '/ai/',
       },
       {
         text: 'Github',
@@ -54,7 +58,7 @@ export default defineUserConfig({
             'javascript/原型和原型链',
             'javascript/继承',
             'javascript/箭头函数',
-            'javascript/异步编程',
+            'javascript/异步编程方案',
           ],
         },
         {
@@ -89,6 +93,26 @@ export default defineUserConfig({
           collapsible: false,
         },
       ],
+      '/devops/': [
+        {
+          text: '性能优化',
+          link: '/devops/performance/',
+          sidebarDepth: 1,
+          collapsible: false,
+          children: [''],
+        },
+        {
+          text: '前端最新技术',
+          link: '/devops/newTechnology/',
+          sidebarDepth: 1,
+          collapsible: false,
+          children: [
+            '/devops/newTechnology/',
+            '/devops/newTechnology/现代Web框架',
+            '/devops/newTechnology/现代Web服务器',
+          ],
+        },
+      ],
       '/code/': [
         {
           text: 'Leetcode',
@@ -105,7 +129,7 @@ export default defineUserConfig({
           children: [],
         },
       ],
-      '/news/': [''],
+      '/ai/': [''],
     },
   }),
 
