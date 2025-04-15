@@ -28,6 +28,10 @@ export default defineUserConfig({
         link: '/devops/',
       },
       {
+        text: '跨端',
+        link: '/native/',
+      },
+      {
         text: '算法编程',
         link: '/code/',
       },
@@ -111,6 +115,15 @@ export default defineUserConfig({
             '/devops/newTechnology/现代Web框架',
             '/devops/newTechnology/现代Web服务器',
           ],
+        },
+      ],
+      '/native/': [
+        {
+          text: '小程序',
+          link: '/native/miniProgram/',
+          sidebarDepth: 1,
+          collapsible: false,
+          children: [''],
         },
       ],
       '/code/': [
